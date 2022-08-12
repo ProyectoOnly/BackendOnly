@@ -1,0 +1,33 @@
+
+/*  const getReadToken= function(req, res, next) {
+	   const token = req.headers.authorization
+	  const checkToken = getDataToken(token);
+		  if (!checkToken.isValid){
+			 return false;
+		  } else {
+			req.headers.userId = checkToken.userId;
+			return true;
+		  }
+		}; */
+
+		CLOUDINARY_CLOUD_NAME=privateworkjason
+CLOUDINARY_CLOUD_KEY=676993832687544
+CLOUDINARY_CLOUD_SECRET=LLBzqn1WbrBUZojMEi6GXxUYqlA
+
+
+        
+		/*    console.log(req.headers)
+			Leemos todas las cabezas guardadas en la req
+			const token = req.headers.authorization
+			console.log(token)
+			se creo una variable apra visualizar la autothorizacion del token
+			const isvalid = getDataToken(token);
+			console.log(isvalid)
+			se verifica el token y se descodifica 
+				if (!isvalid){
+				res.status(500)
+			} else{
+				res.status(200)
+			};
+			si es correcto nos pinta un ok 200 o un error 500
+			const user_id = await isvalid.userId; */
