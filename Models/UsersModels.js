@@ -10,6 +10,7 @@ const UserSchema = new Schema({
   likesProduct: [String],
   images: [String],
   products: [{ type: Schema.Types.ObjectId, ref: "Movies" }],
+ 
 });
 
 module.exports = mongoose.model("User", UserSchema);

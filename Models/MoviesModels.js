@@ -7,16 +7,15 @@ const MovieSchema = new Schema({
   time: String,
   date: String,
   description: String,
-  image: [String],
-
+  image: [{
+    Url: String,
+    PublicId: String}],
   actor: String,
   user: String,
+  categoryId: String,
   director: String,
   featured: String,
+  comentary: [String]
 });
- /*  image: {
-    public_id: String,
-    secure_url: String,
-    url: String,
-  }, */
+
 module.exports = mongoose.model("Movies", MovieSchema);

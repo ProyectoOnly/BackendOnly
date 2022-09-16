@@ -5,7 +5,7 @@ const fs = require("fs");
 const categoriesController = {
   getCategories: async function (req, res) {
     const categories = await Category.find().populate("movies");
-    console.log(req.query);
+    /* console.log(req.query); */
     res.send({
       data: categories,
       basePath: process.env.BASE_PATH,

@@ -139,14 +139,15 @@ const userController = {
   },
 
   updateUser: async function (req, res) {
-    // const {email} = req.body;
-    // const userToBeUpdated = await User.findOneAndUpdate;
-    // userToBeUpdated.save( (err, savedInfo) => {
-    //     if(err) {
-    //         console.log('Ha ocurrido un error', err);
-    //     }
-    //     res.send(`¡Usuario updated: ${savedInfo}!`);
-    // } );
+    const { name, surname1, surname2, email} =req.body;
+    const {userId} = req.params;
+    const userToBeUpdated = await User.findByIdAndUpdate(
+      userId,
+      { name,surname1, surname2, email},
+      { new: true }
+    );
+    res.json(userToBeUpdated)
+    
   },
 
   getUserId: async function (req, res) {

@@ -11,7 +11,7 @@ router.post("/register", upload.array('photos', 12), userController.registerUser
 router.post("/login", userController.loginUser);
 router.post('/:userId/images' , authenticate,upload.array('photos', 12), userController.addUserImage);
 router.delete("/", authenticate,userController.deleteUser);
-router.patch("/", authenticate,userController.updateUser);
+router.patch("/:userId", authenticate,userController.updateUser);
 router.get("/:userId", userController.getUserId);
 router.post("/updatelikes", authenticate,userController.updateLikesProduct);
 

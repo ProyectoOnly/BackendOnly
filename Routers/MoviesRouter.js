@@ -6,8 +6,10 @@ const { upload } = require("../utils/cloudinary");
 
 const router = express.Router();
 
-router.get('/', moviesController.getMoviesT);
+router.get('/', moviesController.getMovies);
 router.post('/' ,authenticate, upload.array('photos', 12), moviesController.addMoviesProductos);
+router.get('/pages', moviesController.getnumberofPages);
+router.get('/productsbypage/:page', moviesController.getProductsbyorder);
 
 router.get('/category/:categoryId',  moviesController.getMoviesByCategory);
 router.get('/profile/:userId',  moviesController.getMoviesByUser);
@@ -17,5 +19,7 @@ router.get('/profile/:userId',  moviesController.getMoviesByUser);
 router.get('/:productId',moviesController.getMoviesById);
 router.patch('/:productId', authenticate,moviesController.updateMoviesProductos);
 router.delete('/:productId', authenticate,moviesController.deleteMoviesProductos);
+
+ 
 
 module.exports = router;
